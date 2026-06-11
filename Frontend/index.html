@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>โรงเรียนเอกจิตตรานุสรณ์</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Prompt:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Frontend/css/style.css">
+  <style>
+    /* ─── Tokens ─── */
+    :root {
+      --sky:    #4AABDB;
+      --sky-lt: #D6F0FA;
+      --sun:    #F9C846;
+      --leaf:   #3EAD72;
+      --leaf-lt:#D4F5E5;
+      --ink:    #1A2340;
+      --mist:   #F4F8FB;
+      --white:  #FFFFFF;
+      --radius: 20px;
+      --shadow: 0 4px 24px rgba(26,35,64,.10);
+      --font-display: 'Prompt', sans-serif;
+      --font-body:    'Sarabun', sans-serif;
+    }
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--ink); background: var(--white); }
+    img  { display: block; max-width: 100%; }
+    a    { text-decoration: none; color: inherit; }
+    ul   { list-style: none; }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-icon">
+      <img src="/Frontend/img/school-logo.jpg" alt="">
+    </div>
+    <div class="nav-logo-text">
+      <span>เอกจิตตรานุสรณ์</span>
+      <span>Ekajittranusorn School</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home"    class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#qa">Q&amp;A</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" aria-label="เปิดเมนู">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<!-- สำหรับมือถือ -->
+<div class="nav-mobile" id="mobileMenu">
+  <a href="#home">🏠 Home</a>
+  <a href="#about">🏫 About</a>
+  <a href="#news">📰 News</a>
+  <a href="#qa">❓ Q&amp;A</a>
+  <a href="#contact">📞 Contact</a>
+</div>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.5 3.5L7 9l-3 1.5.5-3.5L2 4.5 5.5 4z" fill="currentColor"/></svg>
+      โรงเรียนเอกชน · เปิดสอน เตรียมอนุบาล – ประถมศึกษา
+    </div>
+    <h1 class="hero-title">
+      เติบโตอย่าง<span class="accent">มีความสุข</span><br/>
+      เรียนรู้สิ่งดีๆ<br/>
+      ทุกวัน
+    </h1>
+    <p class="hero-sub">
+      โรงเรียนเอกจิตตรานุสรณ์ มุ่งสร้างนักเรียนที่มีคุณภาพ<br/>
+      ทั้งด้านวิชาการ คุณธรรม และทักษะชีวิต
+    </p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">สมัครเรียนวันนี้</button>
+      <button class="btn-outline"  onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">เรียนรู้เพิ่มเติม</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num">??</span><span class="hero-stat-label">ปีแห่งประสบการณ์</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">265+</span><span class="hero-stat-label">นักเรียนปัจจุบัน</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">30+</span><span class="hero-stat-label">ครูผู้เชี่ยวชาญ</span></div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-scene">
+      <div class="blob-bg"></div>
+      <div class="school-illus">
+        <svg viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:90%;max-width:340px">
+          
+          <rect width="360" height="320" fill="#EAF6FD" rx="32"/>
+          <circle cx="300" cy="52" r="28" fill="#F9C846" opacity=".8"/>
+          <circle cx="300" cy="52" r="20" fill="#F9C846"/>
+          
+          <ellipse cx="80" cy="60" rx="36" ry="16" fill="white" opacity=".9"/>
+          <ellipse cx="100" cy="52" rx="26" ry="18" fill="white" opacity=".9"/>
+          <ellipse cx="60" cy="56" rx="22" ry="14" fill="white" opacity=".8"/>
+          
+          <rect x="0" y="262" width="360" height="58" rx="0" fill="#3EAD72" opacity=".25"/>
+          
+          <rect x="60" y="130" width="240" height="140" rx="4" fill="white"/>
+          <rect x="60" y="130" width="240" height="140" rx="4" fill="#4AABDB" opacity=".08"/>
+          
+          <polygon points="40,132 180,62 320,132" fill="#4AABDB" opacity=".85"/>
+          
+          <polygon points="40,132 180,62 320,132" fill="none" stroke="#2E86B5" stroke-width="2"/>
+         
+          <line x1="180" y1="62" x2="180" y2="30" stroke="#E05A5A" stroke-width="2.5"/>
+          <rect x="180" y="30" width="28" height="16" rx="2" fill="#E05A5A"/>
+          
+          <rect x="96"  y="148" width="36" height="30" rx="5" fill="#ADE0F5"/>
+          <rect x="162" y="148" width="36" height="30" rx="5" fill="#ADE0F5"/>
+          <rect x="228" y="148" width="36" height="30" rx="5" fill="#ADE0F5"/>
+          
+          <line x1="114" y1="148" x2="114" y2="178" stroke="white" stroke-width="1.5"/>
+          <line x1="96"  y1="163" x2="132" y2="163" stroke="white" stroke-width="1.5"/>
+          <line x1="180" y1="148" x2="180" y2="178" stroke="white" stroke-width="1.5"/>
+          <line x1="162" y1="163" x2="198" y2="163" stroke="white" stroke-width="1.5"/>
+          <line x1="246" y1="148" x2="246" y2="178" stroke="white" stroke-width="1.5"/>
+          <line x1="228" y1="163" x2="264" y2="163" stroke="white" stroke-width="1.5"/>
+          
+          <rect x="152" y="210" width="56" height="60" rx="6" fill="#F9C846"/>
+          <circle cx="200" cy="242" r="4" fill="#E09A10"/>
+          
+          <rect x="144" y="264" width="72" height="8"  rx="2" fill="#dce8f0"/>
+          <rect x="148" y="257" width="64" height="8"  rx="2" fill="#e8f2f8"/>
+          
+          <ellipse cx="28"  cy="250" rx="22" ry="28" fill="#3EAD72" opacity=".8"/>
+          <rect    cx="28"  cy="278" x="24" y="270" width="8" height="16" fill="#6B3A2A"/>
+          <ellipse cx="332" cy="250" rx="22" ry="28" fill="#3EAD72" opacity=".8"/>
+          <rect    cx="332" cy="278" x="328" y="270" width="8" height="16" fill="#6B3A2A"/>
+          <!-- Small kids figures -->
+          <circle cx="110" cy="255" r="10" fill="#F9C846"/>
+          <rect   x="104" y="264" width="12" height="16" rx="3" fill="#4AABDB"/>
+          <circle cx="250" cy="253" r="10" fill="#F4A0B0"/>
+          <rect   x="244" y="262" width="12" height="16" rx="3" fill="#E05A5A"/>
+        </svg>
+      </div>
+      <!-- Floating cards -->
+      <div class="float-card">
+        <div class="dot" style="background:#D6F0FA">📚</div>
+        <div><div style="font-size:11px;color:#7a95a5;font-weight:500">หลักสูตร</div>อนุบาล–ป.6</div>
+      </div>
+      <div class="float-card">
+        <div class="dot" style="background:#D4F5E5">🏆</div>
+        <div><div style="font-size:11px;color:#7a95a5;font-weight:500">รางวัลคุณภาพ</div>ระดับประเทศ</div>
+      </div>
+      <div class="float-card">
+        <div class="dot" style="background:#FDDEDE">❤️</div>
+        <div><div style="font-size:11px;color:#7a95a5;font-weight:500">ใส่ใจ</div>ทุกคน</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-card c1">
+        <div class="about-card-icon">🏫</div>
+        <div class="about-card-title">โรงเรียนเอกจิตตรานุสรณ์</div>
+        <div class="about-card-text">โรงเรียนเอกชนคุณภาพ ที่ก่อตั้งด้วยปณิธานมุ่งสร้างเด็กไทยให้เติบโตสมบูรณ์ทั้งร่างกาย จิตใจ และสติปัญญา</div>
+      </div>
+      <div class="about-card c2">
+        <div class="about-card-icon">🌟</div>
+        <div class="about-card-title">วิสัยทัศน์</div>
+        <div class="about-card-text">สร้างนักเรียนคุณภาพสู่สังคมไทย</div>
+      </div>
+      <div class="about-card c3">
+        <div class="about-card-icon">🌱</div>
+        <div class="about-card-title">พันธกิจ</div>
+        <div class="about-card-text">เรียนรู้ด้วยความสุข คิดอย่างสร้างสรรค์</div>
+      </div>
+    </div>
+
+    <div class="about-content reveal">
+      <div>
+        <span class="section-label">เกี่ยวกับเรา</span>
+        <h2 class="section-title">สร้างรากฐานที่แข็งแกร่ง<br/>ตั้งแต่วัยเยาว์</h2>
+        <p class="section-desc">เราเชื่อว่าการศึกษาในช่วงวัยเด็กเล็กคือรากฐานสำคัญของชีวิต เราจึงใส่ใจทุกขั้นตอนการเรียนรู้อย่างพิถีพิถัน</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">📖</div>
+        <div>
+          <div class="pillar-title">หลักสูตรมาตรฐาน</div>
+          <div class="pillar-text">ใช้หลักสูตรแกนกลางการศึกษาขั้นพื้นฐาน ผสมผสานการเรียนรู้เชิงรุกที่เหมาะกับวัยของเด็ก</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🧠</div>
+        <div>
+          <div class="pillar-title">พัฒนาการรอบด้าน</div>
+          <div class="pillar-text">เน้นพัฒนาทั้งด้านสติปัญญา อารมณ์ สังคม และร่างกาย ผ่านกิจกรรมที่หลากหลาย</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">👩‍🏫</div>
+        <div>
+          <div class="pillar-title">ครูคุณภาพผ่านการรับรอง</div>
+          <div class="pillar-text">ทีมครูผู้มีประสบการณ์ มีใจรักในการสอน และผ่านการพัฒนาศักยภาพอย่างต่อเนื่อง</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="news-header reveal">
+    <div>
+      <span class="section-label">ข่าวสารและกิจกรรม</span>
+      <h2 class="section-title">อัปเดตล่าสุด</h2>
+    </div>
+  </div>
+
+  <div class="news-grid">
+    <div class="news-card reveal">
+      <div class="news-thumb" style="background:linear-gradient(135deg,#D6F0FA,#ADE0F5)">🎉</div>
+      <div class="news-body">
+        <span class="news-tag">กิจกรรม</span>
+        <div class="news-title">นักเรียนเข้าร่วมกิจกรรมวันไหว้ครู</div>
+        <div class="news-date">11 มิถุนายน 2569</div>
+      </div>
+    </div>
+
+
+
+    <div class="news-card reveal">
+      <div class="news-thumb"><img src="/Frontend/img/news/songkran_2569.jpg"></img></div>
+      <div class="news-body">
+        <span class="news-tag">ข่าวสาร</span>
+        <div class="news-title">แจ้งประกาศหยุดวันสงกรานต์</div>
+        <div class="news-date">4 เมษายน 2569</div>
+      </div>
+    </div>
+
+
+
+    <div class="news-card reveal">
+      <div class="news-thumb"><img src="/Frontend/img/news/newstudent-2569.jpg"></div>
+      <div class="news-body">
+        <span class="news-tag">ข่าวสาร</span>
+        <div class="news-title">สมัครเรียนนัดหมายล่วงหน้า</div>
+        <div class="news-date">20 ธันวาคม 2568</div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</section>
+
+<!-- Q&A -->
+<section id="qa">
+  <div class="qa-grid">
+    <div class="qa-aside reveal">
+      <h3>ยังมีข้อสงสัย?</h3>
+      <p>ติดต่อทีมงานของเราได้เลย เรายินดีตอบทุกคำถามของคุณ</p>
+      <div class="qa-contact-item">📞 <span>034-241-418</span></div>
+      <div class="qa-contact-item">📧 <span>ekjittranusornschool@gmail.com</span></div>
+      <div class="qa-contact-item">⏰ <span>จ–ศ 08:00–16:30 น.</span></div>
+      <button class="btn-primary" style="width:100%;margin-top:8px;background:white;color:var(--sky)" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">ส่งข้อความถึงเรา</button>
+    </div>
+
+    <div>
+      <span class="section-label">คำถามที่พบบ่อย</span>
+      <h2 class="section-title" style="margin-bottom:28px">Q&amp;A</h2>
+      <div class="faq-list reveal">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            โรงเรียนเปิดรับนักเรียนระดับชั้นใดบ้าง?
+            <span class="arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="#4AABDB" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </div>
+          <div class="faq-a">โรงเรียนเอกจิตตรานุสรณ์เปิดรับนักเรียนตั้งแต่ระดับชั้นอนุบาล 1 ถึงประถมศึกษาปีที่ 6 รับนักเรียนทั้งชายและหญิง</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            ค่าเล่าเรียนและค่าใช้จ่ายมีอะไรบ้าง?
+            <span class="arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="#4AABDB" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </div>
+          <div class="faq-a">ค่าเล่าเรียนประกอบด้วยค่าธรรมเนียมการศึกษาและค่ากิจกรรม สามารถสอบถามรายละเอียดเพิ่มเติมได้ที่ฝ่ายทะเบียนหรือติดต่อโรงเรียนโดยตรง</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            มีบริการรถรับส่งนักเรียนหรือไม่?
+            <span class="arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="#4AABDB" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </div>
+          <div class="faq-a">????</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            ขั้นตอนการสมัครเรียนเป็นอย่างไร?
+            <span class="arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="#4AABDB" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </div>
+          <div class="faq-a">????</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            โรงเรียนมีกิจกรรมนอกหลักสูตรอะไรบ้าง?
+            <span class="arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="#4AABDB" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </div>
+          <div class="faq-a">????</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="reveal" style="margin-bottom:48px">
+      <span class="section-label">ติดต่อเรา</span>
+      <h2 class="section-title">เรายินดีต้อนรับเสมอ</h2>
+      <p class="section-desc">มีคำถาม หรืออยากเยี่ยมชมโรงเรียน? ส่งข้อความมาหาเรา หรือแวะมาพบเราได้เลย</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info reveal" style="margin-bottom:32px">
+          <div class="info-row">
+            <div class="info-icon">📍</div>
+            <div><div class="info-label">ที่อยู่</div><div class="info-val">โรงเรียนเอกจิตตรานุสรณ์<br/>จ.นครปฐม</div></div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">📞</div>
+            <div><div class="info-label">โทรศัพท์</div><div class="info-val">034-241-418</div></div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">📧</div>
+            <div><div class="info-label">อีเมล</div><div class="info-val">ekjittranusornschool@gmail.com</div></div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">⏰</div>
+            <div><div class="info-label">เวลาทำการ</div><div class="info-val">วันจันทร์–ศุกร์ 08:00–16:30 น.</div></div>
+          </div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/Ne5uPdYpB26X5zES8" target="_blank" class="map-placeholder-click">
+          <div class="map-placeholder reveal"> 
+              <span>🗺️</span>
+              <p>แผนที่โรงเรียนเอกจิตตรานุสรณ์</p>
+              <small>คลิกเพื่อดูเส้นทาง Google Maps</small>
+          </div>
+        </a>
+        
+      </div>
+
+      <div class="contact-form reveal">
+        <div class="form-row">
+          <div class="field">
+            <label>ชื่อ–นามสกุล</label>
+            <input type="text" placeholder="กรอกชื่อของท่าน" />
+          </div>
+          <div class="field">
+            <label>เบอร์โทรศัพท์</label>
+            <input type="tel" placeholder="08X-XXX-XXXX" />
+          </div>
+        </div>
+        <div class="field">
+          <label>อีเมล</label>
+          <input type="email" placeholder="email@example.com" />
+        </div>
+        <div class="field">
+          <label>เรื่องที่ต้องการติดต่อ</label>
+          <select>
+            <option value="">เลือกหัวข้อ</option>
+            <option>สมัครเรียน</option>
+            <option>สอบถามค่าเล่าเรียน</option>
+            <option>เยี่ยมชมโรงเรียน</option>
+            <option>อื่นๆ</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>ข้อความ</label>
+          <textarea placeholder="กรุณาระบุรายละเอียด..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;padding:14px 36px">ส่งข้อความ ✉️</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon"><img src="/Frontend/img/school-logo.jpg"></div>
+        <span class="footer-logo-name">โรงเรียนเอกจิตตรานุสรณ์</span>
+      </div>
+      <p>โรงเรียนเอกชนคุณภาพ ที่เปิดสอนระดับอนุบาลถึงประถมศึกษา ด้วยความมุ่งมั่นสร้างเด็กไทยให้เติบโตสมบูรณ์ทุกด้าน</p>
+    </div>
+    <div class="footer-col">
+      <h4>เมนูหลัก</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#qa">Q&amp;A</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>ระดับชั้น</h4>
+      <ul>
+        <li><a href="#">เตรียมอนุบาล</a></li>
+        <li><a href="#">อนุบาล 1-3</a></li>
+        <li><a href="#">ประถมศึกษาปีที่ 1-6</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>ติดต่อ</h4>
+      <ul>
+        <li><a href="#">📞 034-241-418</a></li>
+        <li><a href="#">📧 ekjittranusornschool@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/ekjittranusornschool?locale=th_TH" target="_blank">📘 Facebook</a></li>
+        <li><a href="#">📱 LINE Official</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <div class="footer-bottom">
+    <p>© 2568 โรงเรียนเอกจิตตรานุสรณ์ · สงวนลิขสิทธิ์ทุกประการ</p>
+    <div class="footer-socials">
+      <a href="#" class="social-btn">📘</a>
+      <a href="#" class="social-btn">📱</a>
+      <a href="#" class="social-btn">📷</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
